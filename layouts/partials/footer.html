@@ -118,16 +118,16 @@
                     >{{ i18n "newsletter_warning" }}</small
                   >
                 </div>
-                <button type="submit" class="btn btn-info">{{ i18n "submit" }}</button>
+                <button type="submit" class="btn btn-info" disabled="true">{{ i18n "submit" }}</button>
               </form>
             {{ else }}
-              <form method='post' action='https://blogtrottr.com'>
+              <form method='post' action='#'>
               <div class="form-group">
               <input type='email' class="form-control" name='btr_email' placeholder="{{ i18n "newsletter_input_placeholder" }}"/><br />
               <input type='hidden' name='btr_url' value='{{ "" | absLangURL }}index.xml' />
               <input type='hidden' name='schedule_type' value='1' />
               <small id="emailHelp" class="form-text text-muted">{{ i18n "newsletter_warning" }}</small>
-              <button type="submit" class="btn btn-info"> {{ i18n "submit" }} </button>
+              <button type="submit" class="btn btn-info" disabled> {{ i18n "submit" }} </button>
               </form>
             {{ end }}
           </div>
